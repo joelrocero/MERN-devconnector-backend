@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://jdelacruz:0TdeslyzpGPst9bq@reactdb.hshxnjw.mongodb.net/devconnector?retryWrites=true&w=majority",
+  "jwtSecret": "V7BhnIuDJbwgjAcmCMIUf0DiiybqIRM3",
+  "githubClientId": "119f02e31970b88a351d",
+  "githubSecret": "18712854f0e025018e1c70f6fc2c72cff802bf92"
+}
