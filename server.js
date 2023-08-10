@@ -1,7 +1,17 @@
-const express = require('express')
-const connectDB = require('./config/db')
-const path = require('path')
-const cors = require('cors')
+// const express = require('express')
+// const connectDB = require('./config/db')
+// const path = require('path')
+// const cors = require('cors')
+
+import express from 'express'
+import path from 'path'
+import cors from 'cors'
+import connectDB from './config/db.js'
+
+import usersRoutes from './routes/api/users.js'
+import authRoutes from './routes/api/auth.js'
+import profileRoutes from './routes/api/profile.js'
+import postRoutes from './routes/api/posts.js'
 
 const app = express()
 
@@ -13,10 +23,10 @@ app.use(cors())
 app.use(express.json())
 
 // Define Routes
-app.use('/api/users', require('./routes/api/users'))
-app.use('/api/auth', require('./routes/api/auth'))
-app.use('/api/profile', require('./routes/api/profile'))
-app.use('/api/posts', require('./routes/api/posts'))
+app.use('/api/users', usersRoutes)
+app.use('/api/auth', authRoutes)
+app.use('/api/profile', profileRoutes)
+app.use('/api/posts', postRoutes)
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
